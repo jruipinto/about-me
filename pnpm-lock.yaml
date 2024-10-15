@@ -5,6 +5,7 @@ specifiers:
   '@angular-devkit/core': ~18.2.0
   '@angular-devkit/schematics': ~18.2.0
   '@angular/animations': ~18.2.0
+  '@angular/cdk': ~18.2.8
   '@angular/cli': ~18.2.0
   '@angular/common': ~18.2.0
   '@angular/compiler': ~18.2.0
@@ -60,6 +61,7 @@ specifiers:
 
 dependencies:
   '@angular/animations': 18.2.8_@angular+core@18.2.8
+  '@angular/cdk': 18.2.8_uwucez3d2oovf4kd25g7azmacm
   '@angular/common': 18.2.8_iz2ieexr3fuel765wqff2yy76q
   '@angular/compiler': 18.2.8_@angular+core@18.2.8
   '@angular/core': 18.2.8_rxjs@7.8.1+zone.js@0.14.10
@@ -490,6 +492,21 @@ packages:
       - supports-color
       - terser
     dev: true
+
+  /@angular/cdk/18.2.8_uwucez3d2oovf4kd25g7azmacm:
+    resolution: {integrity: sha512-J8A2FkwTBzLleAEWz6EgW73dEoeq87GREBPjTv8+2JV09LX+V3hnbgNk6zWq5k4OXtQNg9WrWP9QyRbUyA597g==}
+    peerDependencies:
+      '@angular/common': ^18.0.0 || ^19.0.0
+      '@angular/core': ^18.0.0 || ^19.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/common': 18.2.8_iz2ieexr3fuel765wqff2yy76q
+      '@angular/core': 18.2.8_rxjs@7.8.1+zone.js@0.14.10
+      rxjs: 7.8.1
+      tslib: 2.7.0
+    optionalDependencies:
+      parse5: 7.2.0
+    dev: false
 
   /@angular/cli/18.2.8:
     resolution: {integrity: sha512-GKXG7F7z5rxwZ8/bnW/Bp8/zsfE/BpHmIP/icLfUIOwv2kaY5OD2tfQssWXPEuqZzYq2AYz+wjVSbWjxGoja8A==}
@@ -12199,7 +12216,6 @@ packages:
     resolution: {integrity: sha512-ZkDsAOcxsUMZ4Lz5fVciOehNcJ+Gb8gTzcA4yl3wnc273BAybYWrQ+Ks/OjCjSEpjvQkDSeZbybK9qj2VHHdGA==}
     dependencies:
       entities: 4.5.0
-    dev: true
 
   /parseurl/1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}
