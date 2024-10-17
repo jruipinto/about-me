@@ -1,0 +1,107 @@
+<h1
+  class="font-serif text-5xl print:text-5xl sm:text-9xl  font-extrabold print:font-extrabold sm:font-semibold text-sky-800"
+>
+  J Rui Pinto
+</h1>
+
+<section id="about-me" class="mt-20 print:mt-20 sm:mt-44 break-inside-avoid-page">
+  <h2 class="font-serif text-4xl print:text-4xl sm:text-6xl font-bold text-sky-800 uppercase">
+    About me
+  </h2>
+  <div class="font-light mt-10 print:mt-10 sm:mt-24 columns-sm gap-16">
+    <p class="mb-2">
+      Diligent <strong class="font-medium">Senior Developer</strong> with a
+      strong focus in product quality, pragmatism and results delivery, which
+      specialises in <strong class="font-medium">frontend</strong> technologies,
+      particularly in <strong class="font-medium">Angular</strong> and its
+      <strong class="font-medium">ecosystem</strong>.
+    </p>
+    <p class="mb-2">
+      Proficient with programming paradigms as
+      <strong class="font-medium">Object Oriented</strong>,
+      <strong class="font-medium">Functional</strong> and
+      <strong class="font-medium">Reactive</strong>.
+    </p>
+    <p class="mb-2">Long experience in electronics and customer support.</p>
+    <p class="mb-2">
+      Seen as <strong class="font-medium">reliable</strong> team member, who
+      <strong class="font-medium"
+        >shines at interacting with stackholders</strong
+      >, finding balance and helping to design the most appropriate solution.
+    </p>
+    <p class="mb-2">
+      In my spare times I like to read about UX, technology, business and I also
+      engineer my own projects.
+    </p>
+  </div>
+</section>
+
+<section id="work-experience" class="mt-20 print:mt-20 sm:mt-40 break-inside-avoid-page">
+  <h2 class="font-serif text-4xl print:text-4xl sm:text-6xl font-bold text-sky-800 uppercase">
+    Work experience
+  </h2>
+
+  <section
+    [id]="'work-experience-' + work.company | lowercase"
+    class="mt-10 print:mt-10 sm:mt-24 break-inside-avoid-page"
+    *ngFor="let work of WORK_EXPERIENCE"
+  >
+    <div>
+      <h3 class="text-2xl font-extrabold text-sky-800">
+        {{ work.position }}
+      </h3>
+      <a
+        class="inline-flex items-center hover:scale-110 active:scale-100 transition-all"
+        [class.cursor-not-allowed]="!work.companyUrl"
+        [href]="work.companyUrl"
+      >
+        <img
+          *ngIf="work.companyLogoSrc"
+          class="inline-block w-6 h-6 me-3"
+          [src]="work.companyLogoSrc"
+          [alt]="'logo of ' + work.company"
+        />
+        <div class="text-2xl font-extrabold text-neutral-500">
+          {{ work.company }}
+        </div>
+      </a>
+      <p class="text-lg">
+        {{ work.startedAt | date }} - {{ work.endedAt | date }}
+      </p>
+    </div>
+
+    <h4 class="text-neutral-500 mt-8 text-sm font-extrabold uppercase">
+      Main contributions
+    </h4>
+    <ul class="mt-3 columns-sm gap-16 ms-4">
+      <li
+        class="font-light mb-2"
+        *ngFor="let responsibility of work.responsibilities"
+      >
+        {{ responsibility }}
+      </li>
+    </ul>
+
+    <h4 class="text-neutral-500 mt-8 text-sm font-extrabold uppercase">
+      Tech Stack
+    </h4>
+    <ul class="mt-3">
+      <li
+        class="text-neutral-500 text-sm inline-flex items-center align-top bg-transparent rounded-full me-2 mb-2 hover:drop-shadow hover:scale-110 hover:bg-gray-50 border border-neutral-500 active:scale-100 active:bg-neutral-200 transition-all select-none"
+        *ngFor="let tech of work.techStack"
+      >
+        <a
+          [href]="tech.docsUrl"
+          class="flex items-center px-4 py-2 rounded-full h-full w-full"
+        >
+          <img
+            class="h-4 w-4 me-2 inline-block"
+            [src]="tech.iconSrc"
+            [alt]="tech.name + ' logo'"
+          />
+          {{ tech.name }}
+        </a>
+      </li>
+    </ul>
+  </section>
+</section>

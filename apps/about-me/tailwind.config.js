@@ -9,6 +9,12 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    container: {
+      center: true,
+      screens: {
+        max: '70rem',
+      },
+    },
   },
   plugins: [],
 };
