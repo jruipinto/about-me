@@ -5,7 +5,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     position: 'Senior Angular Frontend Dev',
     company: 'm.Doc GmbH',
-    companyLogoSrc: '/assets/images/mdoc-logo.ico',
+    companyLogoSrc: 'assets/images/mdoc-logo.ico',
     companyUrl: 'https://mdoc.one',
     startedAt: new Date('10/08/2022'),
     endedAt: new Date(),
@@ -36,7 +36,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     position: 'Senior Angular Frontend Dev',
     company: 'Windmill',
-    companyLogoSrc: '/assets/images/windmill-logo.webp',
+    companyLogoSrc: 'assets/images/windmill-logo.webp',
     companyUrl: 'https://www.windmill.digital/',
     startedAt: new Date('09/01/2022'),
     endedAt: new Date('10/09/2022'),
@@ -67,7 +67,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     position: 'Mid & Senior Frontend Dev',
     company: 'NTT Data',
-    companyLogoSrc: '/assets/images/nttdata-logo.ico',
+    companyLogoSrc: 'assets/images/nttdata-logo.ico',
     companyUrl: 'https://pt.nttdata.com/',
     startedAt: new Date('05/01/2021'),
     endedAt: new Date('08/31/2022'),
