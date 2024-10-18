@@ -86,7 +86,7 @@
     }
   },
   "cli": {
-    "packageManager": "pnpm"
+    "packageManager": "npm"
   },
   "schematics": {
     "@schematics/angular:component": {
