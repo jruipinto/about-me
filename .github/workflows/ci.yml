@@ -23,13 +23,14 @@ jobs:
       # Learn more at https://nx.dev/ci/reference/nx-cloud-cli#npx-nxcloud-startcirun
       - run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
 
-      # Cache node_modules
-      - uses: actions/setup-node@v4
+      # Cache node_modules # TODO: setup cache, as it was disabled after moving to pnpm
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          version: 9
+          run_install:  |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
 
-      - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
 
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
