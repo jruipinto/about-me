@@ -32,8 +32,8 @@ jobs:
         with:
           version: 9
           run_install:  |
-            - recursive: true
-              args: [--force, --frozen-lockfile, --strict-peer-dependencies]
+            - recursive: false
+              args: [--frozen-lockfile, --strict-peer-dependencies]
 
       - uses: nrwl/nx-set-shas@v4
 
